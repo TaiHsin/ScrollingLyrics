@@ -9,10 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "LyricsView.h"
 
-//@interface LyricsView()
-//
-//
-//@end
+@interface LyricsView()
+
+@property (nonatomic, strong) NSArray * lyricsArray;
+
+@end
 
 
 @implementation LyricsView
@@ -23,9 +24,9 @@
     if (self) {
         [self setBackgroundColor: [UIColor whiteColor]];
         [self addLyricsContentView];
-        [self layoutIfNeeded];
+
+        [self importlyricsFile];
         [self addLyricsLayers];
-//        [self addBlurView];
     }
     return self;
 }
@@ -84,6 +85,7 @@
                                                       attribute: NSLayoutAttributeTrailingMargin
                                                      multiplier: 1
                                                        constant: 0]];
+    [self layoutIfNeeded];
 }
 
 - (void)addLyricsLayers {
@@ -92,7 +94,6 @@
     CGFloat totalHight = lyricsLayerSize.height;
     CGFloat totalWidth = lyricsLayerSize.width;
     
-//    CGFloat lyricsLayerHeight = lyricsViewHight / 10;
     int multiplier = 0;
     CGFloat textLayerHeight = 40.0;
     
@@ -112,5 +113,21 @@
     
     self.lyricsContentView.clipsToBounds = YES;
 }
+
+-(void)importlyricsFile {
+    
+    NSString * filePath = [[NSBundle mainBundle] pathForResource: @"Lyrics" ofType: @"txt"];
+    NSError * error;
+    NSString * fileContents = [NSString stringWithContentsOfFile: filePath encoding: NSUTF8StringEncoding error: &error];
+    
+    if (error)
+        NSLog(@"%@",error.localizedDescription);
+    
+    // TODO: Modified NSMutableArray
+    self.lyricsArray = [fileContents componentsSeparatedByString: @"\n"];
+    
+    NSLog(@"items = %lu", (unsigned long)[self.lyricsArray count]);
+}
+
 
 @end
