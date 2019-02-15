@@ -15,6 +15,7 @@
 		5C7F3A4C2216A68B005F06BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F3A4B2216A68B005F06BA /* main.m */; };
 		5C7F3A562216A68B005F06BA /* ScrollingLyricsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F3A552216A68B005F06BA /* ScrollingLyricsTests.m */; };
 		5C7F3A612216A68B005F06BA /* ScrollingLyricsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F3A602216A68B005F06BA /* ScrollingLyricsUITests.m */; };
+		5C7F3A6F2216B057005F06BA /* LyricsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F3A6E2216B057005F06BA /* LyricsView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +52,8 @@
 		5C7F3A5C2216A68B005F06BA /* ScrollingLyricsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollingLyricsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7F3A602216A68B005F06BA /* ScrollingLyricsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollingLyricsUITests.m; sourceTree = "<group>"; };
 		5C7F3A622216A68B005F06BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C7F3A6E2216B057005F06BA /* LyricsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LyricsView.m; sourceTree = "<group>"; };
+		5C7F3A702216B062005F06BA /* LyricsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LyricsView.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +108,8 @@
 				5C7F3A3D2216A68A005F06BA /* AppDelegate.m */,
 				5C7F3A3F2216A68A005F06BA /* ViewController.h */,
 				5C7F3A402216A68A005F06BA /* ViewController.m */,
+				5C7F3A702216B062005F06BA /* LyricsView.h */,
+				5C7F3A6E2216B057005F06BA /* LyricsView.m */,
 				5C7F3A422216A68A005F06BA /* Main.storyboard */,
 				5C7F3A452216A68B005F06BA /* Assets.xcassets */,
 				5C7F3A472216A68B005F06BA /* LaunchScreen.storyboard */,
@@ -262,6 +267,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7F3A6F2216B057005F06BA /* LyricsView.m in Sources */,
 				5C7F3A412216A68A005F06BA /* ViewController.m in Sources */,
 				5C7F3A4C2216A68B005F06BA /* main.m in Sources */,
 				5C7F3A3E2216A68A005F06BA /* AppDelegate.m in Sources */,

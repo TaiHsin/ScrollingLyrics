@@ -1,5 +1,5 @@
 //
-//  ViewController.h
+//  LyricsView.h
 //  ScrollingLyrics
 //
 //  Created by Tsihsin Lee on 2019/2/15.
@@ -7,11 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "LyricsView.h"
 
-@interface ViewController : UIViewController
+@interface LyricsView: UIView
 
-@property (nonatomic, strong) LyricsView * lyricsView;
+@property (nonatomic, strong) UIView * lyricsContentView;
 
 @end
+
 

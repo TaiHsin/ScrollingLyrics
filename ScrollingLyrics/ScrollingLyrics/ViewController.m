@@ -16,7 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    CGRect rect = [[UIScreen mainScreen] bounds];
+    
+    self.lyricsView = [[LyricsView alloc] initWithFrame: rect];
+    [self.view addSubview: self.lyricsView];
 }
 
 
