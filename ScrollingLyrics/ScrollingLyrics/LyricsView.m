@@ -88,26 +88,26 @@
 
 - (void)addLyricsLayers {
     
-    CGSize lyricsViewSize = self.lyricsContentView.frame.size;
-    CGFloat lyricsViewHight = lyricsViewSize.height;
-    CGFloat lyricsViewWidth = lyricsViewSize.width;
+    CGSize lyricsLayerSize = self.lyricsContentView.frame.size;
+    CGFloat totalHight = lyricsLayerSize.height;
+    CGFloat totalWidth = lyricsLayerSize.width;
     
 //    CGFloat lyricsLayerHeight = lyricsViewHight / 10;
     int multiplier = 0;
-    CGFloat lyricsLayerHeight = 40.0;
+    CGFloat textLayerHeight = 40.0;
     
-    while (lyricsViewHight > 0)  {
+    while (totalHight > 0)  {
         
-        CALayer * lyricsLayer = [CALayer new];
-        lyricsLayer.frame = CGRectMake(0, lyricsLayerHeight * multiplier, lyricsViewWidth, lyricsLayerHeight);
-        lyricsLayer.backgroundColor = [UIColor greenColor].CGColor;
-        lyricsLayer.borderColor =  [UIColor blackColor].CGColor;
-        lyricsLayer.borderWidth = 1.0;
+        CALayer * textLayer = [CALayer new];
+        textLayer.frame = CGRectMake(0, textLayerHeight * multiplier, totalWidth, textLayerHeight);
+        textLayer.backgroundColor = [UIColor greenColor].CGColor;
+        textLayer.borderColor =  [UIColor blackColor].CGColor;
+        textLayer.borderWidth = 1.0;
         
-        [self.lyricsContentView.layer addSublayer: lyricsLayer];
+        [self.lyricsContentView.layer addSublayer: textLayer];
         
         multiplier += 1;
-        lyricsViewHight -= 40.0;
+        totalHight -= 40.0;
     }
     
     self.lyricsContentView.clipsToBounds = YES;
