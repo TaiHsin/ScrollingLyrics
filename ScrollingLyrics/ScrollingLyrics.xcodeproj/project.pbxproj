@@ -1,0 +1,584 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		5C7F3A3E2216A68A005F06BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F3A3D2216A68A005F06BA /* AppDelegate.m */; };
+		5C7F3A412216A68A005F06BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F3A402216A68A005F06BA /* ViewController.m */; };
+		5C7F3A442216A68A005F06BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F3A422216A68A005F06BA /* Main.storyboard */; };
+		5C7F3A462216A68B005F06BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F3A452216A68B005F06BA /* Assets.xcassets */; };
+		5C7F3A492216A68B005F06BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F3A472216A68B005F06BA /* LaunchScreen.storyboard */; };
+		5C7F3A4C2216A68B005F06BA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F3A4B2216A68B005F06BA /* main.m */; };
+		5C7F3A562216A68B005F06BA /* ScrollingLyricsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F3A552216A68B005F06BA /* ScrollingLyricsTests.m */; };
+		5C7F3A612216A68B005F06BA /* ScrollingLyricsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F3A602216A68B005F06BA /* ScrollingLyricsUITests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5C7F3A522216A68B005F06BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C7F3A312216A68A005F06BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C7F3A382216A68A005F06BA;
+			remoteInfo = ScrollingLyrics;
+		};
+		5C7F3A5D2216A68B005F06BA /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 5C7F3A312216A68A005F06BA /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 5C7F3A382216A68A005F06BA;
+			remoteInfo = ScrollingLyrics;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		5C7F3A392216A68A005F06BA /* ScrollingLyrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollingLyrics.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C7F3A3C2216A68A005F06BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		5C7F3A3D2216A68A005F06BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		5C7F3A3F2216A68A005F06BA /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		5C7F3A402216A68A005F06BA /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
+		5C7F3A432216A68A005F06BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		5C7F3A452216A68B005F06BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		5C7F3A482216A68B005F06BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		5C7F3A4A2216A68B005F06BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C7F3A4B2216A68B005F06BA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		5C7F3A512216A68B005F06BA /* ScrollingLyricsTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollingLyricsTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C7F3A552216A68B005F06BA /* ScrollingLyricsTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollingLyricsTests.m; sourceTree = "<group>"; };
+		5C7F3A572216A68B005F06BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		5C7F3A5C2216A68B005F06BA /* ScrollingLyricsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ScrollingLyricsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		5C7F3A602216A68B005F06BA /* ScrollingLyricsUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ScrollingLyricsUITests.m; sourceTree = "<group>"; };
+		5C7F3A622216A68B005F06BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5C7F3A362216A68A005F06BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7F3A4E2216A68B005F06BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7F3A592216A68B005F06BA /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		5C7F3A302216A68A005F06BA = {
+			isa = PBXGroup;
+			children = (
+				5C7F3A3B2216A68A005F06BA /* ScrollingLyrics */,
+				5C7F3A542216A68B005F06BA /* ScrollingLyricsTests */,
+				5C7F3A5F2216A68B005F06BA /* ScrollingLyricsUITests */,
+				5C7F3A3A2216A68A005F06BA /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		5C7F3A3A2216A68A005F06BA /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				5C7F3A392216A68A005F06BA /* ScrollingLyrics.app */,
+				5C7F3A512216A68B005F06BA /* ScrollingLyricsTests.xctest */,
+				5C7F3A5C2216A68B005F06BA /* ScrollingLyricsUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		5C7F3A3B2216A68A005F06BA /* ScrollingLyrics */ = {
+			isa = PBXGroup;
+			children = (
+				5C7F3A3C2216A68A005F06BA /* AppDelegate.h */,
+				5C7F3A3D2216A68A005F06BA /* AppDelegate.m */,
+				5C7F3A3F2216A68A005F06BA /* ViewController.h */,
+				5C7F3A402216A68A005F06BA /* ViewController.m */,
+				5C7F3A422216A68A005F06BA /* Main.storyboard */,
+				5C7F3A452216A68B005F06BA /* Assets.xcassets */,
+				5C7F3A472216A68B005F06BA /* LaunchScreen.storyboard */,
+				5C7F3A4A2216A68B005F06BA /* Info.plist */,
+				5C7F3A4B2216A68B005F06BA /* main.m */,
+			);
+			path = ScrollingLyrics;
+			sourceTree = "<group>";
+		};
+		5C7F3A542216A68B005F06BA /* ScrollingLyricsTests */ = {
+			isa = PBXGroup;
+			children = (
+				5C7F3A552216A68B005F06BA /* ScrollingLyricsTests.m */,
+				5C7F3A572216A68B005F06BA /* Info.plist */,
+			);
+			path = ScrollingLyricsTests;
+			sourceTree = "<group>";
+		};
+		5C7F3A5F2216A68B005F06BA /* ScrollingLyricsUITests */ = {
+			isa = PBXGroup;
+			children = (
+				5C7F3A602216A68B005F06BA /* ScrollingLyricsUITests.m */,
+				5C7F3A622216A68B005F06BA /* Info.plist */,
+			);
+			path = ScrollingLyricsUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5C7F3A382216A68A005F06BA /* ScrollingLyrics */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C7F3A652216A68B005F06BA /* Build configuration list for PBXNativeTarget "ScrollingLyrics" */;
+			buildPhases = (
+				5C7F3A352216A68A005F06BA /* Sources */,
+				5C7F3A362216A68A005F06BA /* Frameworks */,
+				5C7F3A372216A68A005F06BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ScrollingLyrics;
+			productName = ScrollingLyrics;
+			productReference = 5C7F3A392216A68A005F06BA /* ScrollingLyrics.app */;
+			productType = "com.apple.product-type.application";
+		};
+		5C7F3A502216A68B005F06BA /* ScrollingLyricsTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C7F3A682216A68B005F06BA /* Build configuration list for PBXNativeTarget "ScrollingLyricsTests" */;
+			buildPhases = (
+				5C7F3A4D2216A68B005F06BA /* Sources */,
+				5C7F3A4E2216A68B005F06BA /* Frameworks */,
+				5C7F3A4F2216A68B005F06BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C7F3A532216A68B005F06BA /* PBXTargetDependency */,
+			);
+			name = ScrollingLyricsTests;
+			productName = ScrollingLyricsTests;
+			productReference = 5C7F3A512216A68B005F06BA /* ScrollingLyricsTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		5C7F3A5B2216A68B005F06BA /* ScrollingLyricsUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5C7F3A6B2216A68B005F06BA /* Build configuration list for PBXNativeTarget "ScrollingLyricsUITests" */;
+			buildPhases = (
+				5C7F3A582216A68B005F06BA /* Sources */,
+				5C7F3A592216A68B005F06BA /* Frameworks */,
+				5C7F3A5A2216A68B005F06BA /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				5C7F3A5E2216A68B005F06BA /* PBXTargetDependency */,
+			);
+			name = ScrollingLyricsUITests;
+			productName = ScrollingLyricsUITests;
+			productReference = 5C7F3A5C2216A68B005F06BA /* ScrollingLyricsUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5C7F3A312216A68A005F06BA /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 1010;
+				ORGANIZATIONNAME = "Tsihsin Lee";
+				TargetAttributes = {
+					5C7F3A382216A68A005F06BA = {
+						CreatedOnToolsVersion = 10.1;
+					};
+					5C7F3A502216A68B005F06BA = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 5C7F3A382216A68A005F06BA;
+					};
+					5C7F3A5B2216A68B005F06BA = {
+						CreatedOnToolsVersion = 10.1;
+						TestTargetID = 5C7F3A382216A68A005F06BA;
+					};
+				};
+			};
+			buildConfigurationList = 5C7F3A342216A68A005F06BA /* Build configuration list for PBXProject "ScrollingLyrics" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 5C7F3A302216A68A005F06BA;
+			productRefGroup = 5C7F3A3A2216A68A005F06BA /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				5C7F3A382216A68A005F06BA /* ScrollingLyrics */,
+				5C7F3A502216A68B005F06BA /* ScrollingLyricsTests */,
+				5C7F3A5B2216A68B005F06BA /* ScrollingLyricsUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		5C7F3A372216A68A005F06BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C7F3A492216A68B005F06BA /* LaunchScreen.storyboard in Resources */,
+				5C7F3A462216A68B005F06BA /* Assets.xcassets in Resources */,
+				5C7F3A442216A68A005F06BA /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7F3A4F2216A68B005F06BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7F3A5A2216A68B005F06BA /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5C7F3A352216A68A005F06BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C7F3A412216A68A005F06BA /* ViewController.m in Sources */,
+				5C7F3A4C2216A68B005F06BA /* main.m in Sources */,
+				5C7F3A3E2216A68A005F06BA /* AppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7F3A4D2216A68B005F06BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C7F3A562216A68B005F06BA /* ScrollingLyricsTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5C7F3A582216A68B005F06BA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C7F3A612216A68B005F06BA /* ScrollingLyricsUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		5C7F3A532216A68B005F06BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C7F3A382216A68A005F06BA /* ScrollingLyrics */;
+			targetProxy = 5C7F3A522216A68B005F06BA /* PBXContainerItemProxy */;
+		};
+		5C7F3A5E2216A68B005F06BA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 5C7F3A382216A68A005F06BA /* ScrollingLyrics */;
+			targetProxy = 5C7F3A5D2216A68B005F06BA /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		5C7F3A422216A68A005F06BA /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C7F3A432216A68A005F06BA /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		5C7F3A472216A68B005F06BA /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				5C7F3A482216A68B005F06BA /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		5C7F3A632216A68B005F06BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5C7F3A642216A68B005F06BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5C7F3A662216A68B005F06BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J3AZ8J7WB4;
+				INFOPLIST_FILE = ScrollingLyrics/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Tsihsin-Lee.ScrollingLyrics";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		5C7F3A672216A68B005F06BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J3AZ8J7WB4;
+				INFOPLIST_FILE = ScrollingLyrics/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Tsihsin-Lee.ScrollingLyrics";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		5C7F3A692216A68B005F06BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J3AZ8J7WB4;
+				INFOPLIST_FILE = ScrollingLyricsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Tsihsin-Lee.ScrollingLyricsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScrollingLyrics.app/ScrollingLyrics";
+			};
+			name = Debug;
+		};
+		5C7F3A6A2216A68B005F06BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J3AZ8J7WB4;
+				INFOPLIST_FILE = ScrollingLyricsTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Tsihsin-Lee.ScrollingLyricsTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/ScrollingLyrics.app/ScrollingLyrics";
+			};
+			name = Release;
+		};
+		5C7F3A6C2216A68B005F06BA /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J3AZ8J7WB4;
+				INFOPLIST_FILE = ScrollingLyricsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Tsihsin-Lee.ScrollingLyricsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ScrollingLyrics;
+			};
+			name = Debug;
+		};
+		5C7F3A6D2216A68B005F06BA /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = J3AZ8J7WB4;
+				INFOPLIST_FILE = ScrollingLyricsUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "Tsihsin-Lee.ScrollingLyricsUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = ScrollingLyrics;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5C7F3A342216A68A005F06BA /* Build configuration list for PBXProject "ScrollingLyrics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C7F3A632216A68B005F06BA /* Debug */,
+				5C7F3A642216A68B005F06BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C7F3A652216A68B005F06BA /* Build configuration list for PBXNativeTarget "ScrollingLyrics" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C7F3A662216A68B005F06BA /* Debug */,
+				5C7F3A672216A68B005F06BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C7F3A682216A68B005F06BA /* Build configuration list for PBXNativeTarget "ScrollingLyricsTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C7F3A692216A68B005F06BA /* Debug */,
+				5C7F3A6A2216A68B005F06BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5C7F3A6B2216A68B005F06BA /* Build configuration list for PBXNativeTarget "ScrollingLyricsUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5C7F3A6C2216A68B005F06BA /* Debug */,
+				5C7F3A6D2216A68B005F06BA /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5C7F3A312216A68A005F06BA /* Project object */;
+}
