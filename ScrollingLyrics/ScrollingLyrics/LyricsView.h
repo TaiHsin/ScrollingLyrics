@@ -12,6 +12,8 @@
 
 @property (nonatomic, strong) UIView * lyricsContentView;
 
+- (void)lyricsWillScroll;
+
 @end
 
 

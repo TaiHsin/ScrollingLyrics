@@ -122,8 +122,10 @@
     self.lyricsContentView.clipsToBounds = YES;
 }
 
-- (void)highlightText {
+- (void)highlightText: (CATextLayer *)lyrics {
     
+    [lyrics setBackgroundColor: [UIColor whiteColor].CGColor];
+    [lyrics setForegroundColor: [UIColor blackColor].CGColor];
 }
 
 - (void)lyricsWillScroll {
