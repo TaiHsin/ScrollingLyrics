@@ -90,44 +90,64 @@
 
 - (void)addLyricsLayers {
     
+    NSMutableArray * array = [NSMutableArray arrayWithArray: self.lyricsArray];
+    
     CGSize lyricsLayerSize = self.lyricsContentView.frame.size;
     CGFloat totalHight = lyricsLayerSize.height;
     CGFloat totalWidth = lyricsLayerSize.width;
     
-    int multiplier = 0;
-    CGFloat textLayerHeight = 40.0;
+    int i = 0;
+    CGFloat textLayerHeight = 35.0;
     
-    while (totalHight > 0)  {
+//    while (totalHight > 0)  {
+    
+    while (array.count) {
         
-        CALayer * textLayer = [CALayer new];
-        textLayer.frame = CGRectMake(0, textLayerHeight * multiplier, totalWidth, textLayerHeight);
-        textLayer.backgroundColor = [UIColor greenColor].CGColor;
-        textLayer.borderColor =  [UIColor blackColor].CGColor;
-        textLayer.borderWidth = 1.0;
+        CATextLayer * textLayer = [CATextLayer new];
+        [textLayer setFrame: CGRectMake(0, textLayerHeight * i, totalWidth, textLayerHeight)];
+        [textLayer setBackgroundColor: [UIColor darkGrayColor].CGColor];
+//        [textLayer setBorderColor: [UIColor blackColor].CGColor];
+//        [textLayer setBorderWidth: 1.0];
+        [textLayer setString: array[0]];
+        [textLayer setFontSize: 18];
+        [textLayer setAlignmentMode: kCAAlignmentCenter];
         
         [self.lyricsContentView.layer addSublayer: textLayer];
+        [array removeObjectAtIndex: 0];
         
-        multiplier += 1;
-        totalHight -= 40.0;
+        i += 1;
+        totalHight -= 35.0;
     }
     
     self.lyricsContentView.clipsToBounds = YES;
 }
 
--(void)importlyricsFile {
+- (void)highlightText {
+    
+}
+
+- (void)lyricsWillScroll {
+    
+    
+}
+
+// Import Lyrics file (should move to VC or model)
+- (void)importlyricsFile {
+    
+    // TODO: Modified to return NSArray rather than stored in global property.
     
     NSString * filePath = [[NSBundle mainBundle] pathForResource: @"Lyrics" ofType: @"txt"];
     NSError * error;
     NSString * fileContents = [NSString stringWithContentsOfFile: filePath encoding: NSUTF8StringEncoding error: &error];
     
-    if (error)
+    if (error) {
         NSLog(@"%@",error.localizedDescription);
+    }
     
     // TODO: Modified NSMutableArray
     self.lyricsArray = [fileContents componentsSeparatedByString: @"\n"];
     
     NSLog(@"items = %lu", (unsigned long)[self.lyricsArray count]);
 }
-
 
 @end
