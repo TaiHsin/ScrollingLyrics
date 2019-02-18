@@ -22,7 +22,7 @@
     self.lyricsView = [[LyricsView alloc] initWithFrame: rect];
     [self.view addSubview: self.lyricsView];
     
-    [NSTimer scheduledTimerWithTimeInterval: 5 target: self selector: @selector(scrollLyrics:) userInfo: nil repeats: YES];
+    [NSTimer scheduledTimerWithTimeInterval: 2 target: self selector: @selector(scrollLyrics:) userInfo: nil repeats: YES];
 }
 
 - (void)scrollLyrics: (NSTimer *)timer {
