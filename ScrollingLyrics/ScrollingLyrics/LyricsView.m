@@ -11,12 +11,10 @@
 
 @interface LyricsView()
 
-@property (nonatomic, strong) NSArray * lyricsArray;
 @property (nonatomic, strong) NSMutableArray * layerArray;
 @property double positionY;
 
 @end
-
 
 @implementation LyricsView
 
@@ -24,11 +22,8 @@
 {
     self = [super initWithFrame: frame];
     if (self) {
-        [self setBackgroundColor: [UIColor whiteColor]];
+        [self setBackgroundColor: [UIColor blackColor]];
         [self addLyricsContentView];
-
-        [self importlyricsFile];
-        [self addLyricsLayers];
     }
     return self;
 }
@@ -53,7 +48,6 @@
     
     self.lyricsContentView = [UIView new];
     [self.lyricsContentView setTranslatesAutoresizingMaskIntoConstraints: NO];
-    [self.lyricsContentView setBackgroundColor: [UIColor grayColor]];
     [self addSubview: self.lyricsContentView];
 
     [self addConstraint: [NSLayoutConstraint constraintWithItem: self.lyricsContentView
@@ -70,7 +64,7 @@
                                                                     toItem: self
                                                                  attribute: NSLayoutAttributeBottom
                                                                 multiplier: 1
-                                                                  constant: -50]];
+                                                                  constant: -70]];
     
     [self addConstraint: [NSLayoutConstraint constraintWithItem: self.lyricsContentView
                                                       attribute: NSLayoutAttributeLeadingMargin
@@ -90,41 +84,35 @@
     [self layoutIfNeeded];
 }
 
-- (void)addLyricsLayers {
+- (void)addLyricsLayersWith: (NSArray *)lyricsArray {
     
-    NSMutableArray * array = [NSMutableArray arrayWithArray: self.lyricsArray];
-    CGSize lyricsLayerSize = self.lyricsContentView.frame.size;
+    NSMutableArray * array = [NSMutableArray arrayWithArray: lyricsArray];
     int i = 0;
-    CGFloat textLayerHeight = 35.0;
+    CGSize lyricsLayerSize = self.lyricsContentView.frame.size;
+    CGFloat textLayerHeight = 30.0;
 
     while (array.count) {
-        
         CATextLayer * textLayer = [CATextLayer new];
         [textLayer setFrame: CGRectMake(0, textLayerHeight * i, lyricsLayerSize.width, textLayerHeight)];
-        [textLayer setBackgroundColor: [UIColor darkGrayColor].CGColor];
+        [textLayer setBackgroundColor: [UIColor blackColor].CGColor];
         [textLayer setString: array[0]];
-        [textLayer setFontSize: 18];
+        [textLayer setFontSize: 20];
         [textLayer setAlignmentMode: kCAAlignmentCenter];
-        
         [self.lyricsContentView.layer addSublayer: textLayer];
         [array removeObjectAtIndex: 0];
         
-        i += 1;
+        i ++;
     }
     
     self.lyricsContentView.clipsToBounds = YES;
-    
     self.layerArray = [NSMutableArray arrayWithArray: self.lyricsContentView.layer.sublayers];
     self.positionY = [self.layerArray[8] position].y;
-    
-    NSLog(@"%f", self.positionY);
-    NSLog(@"%lu", (unsigned long)self.layerArray.count);
 }
 
 - (void)highlightLyrics: (CATextLayer *)layer with: (BOOL)isHighlight {
     
-    if (isHighlight) {
-        [layer setBackgroundColor: [UIColor darkGrayColor].CGColor];
+    if (!isHighlight) {
+        [layer setBackgroundColor: [UIColor clearColor].CGColor];
         [layer setForegroundColor: [UIColor whiteColor].CGColor];
     
     } else {
@@ -137,42 +125,57 @@
     
     CABasicAnimation * animation = [CABasicAnimation animationWithKeyPath: @"position"];
     animation.fromValue = [layer valueForKey: @"position"];
-    CGPoint point = CGPointMake(layer.position.x, layer.position.y - 35);
+    CGPoint point = CGPointMake(layer.position.x, layer.position.y - 30);
     animation.toValue = [NSValue valueWithCGPoint: point];
     layer.position = point;
     [layer addAnimation: animation forKey: @"position"];
 }
 
-- (void)lyricsWillScroll {
+- (void)startLyrics {
+    
+    CATextLayer * layer = self.layerArray[8];
+
+    while ([[layer string] length] == 0) {
+        [self scrollLyrics];
+    }
+    
+    [self highlightLyrics: layer with: YES];
+}
+
+- (BOOL)isLastLayer: (CATextLayer *)layer {
+    
+    NSString * lastLayerString = [self.layerArray.lastObject string];
+    
+    if ([[layer string] isEqualToString: lastLayerString]) {
+        return YES;
+    }
+    return NO;
+}
+
+- (BOOL)scrollLyrics {
+    
+    CATextLayer * highlightLayer;
     
     for (CATextLayer * layer in self.layerArray) {
-
         if (layer.position.y == self.positionY) {
-            [self highlightLyrics: layer with: YES];
+            [self highlightLyrics: layer with: NO];
         }
         
         [self addMoveAnimation: layer];
         
         if (layer.position.y == self.positionY) {
-            [self highlightLyrics: layer with: NO];
+            [self highlightLyrics: layer with: YES];
+            highlightLayer = layer;
         }
     }
-}
-
-// Import Lyrics file (should move to VC or model)
-- (void)importlyricsFile {
     
-    // TODO: Modified to return NSArray rather than stored in global property.
-    
-    NSString * filePath = [[NSBundle mainBundle] pathForResource: @"Lyrics" ofType: @"txt"];
-    NSError * error;
-    NSString * fileContents = [NSString stringWithContentsOfFile: filePath encoding: NSUTF8StringEncoding error: &error];
-    
-    if (error) {
-        NSLog(@"%@",error.localizedDescription);
+    NSInteger length = [[highlightLayer string] length];
+    if (length == 0) {
+        NSLog(@"EMPTY!!!!!!!!!!!!!");
+        [self scrollLyrics];
     }
     
-    self.lyricsArray = [fileContents componentsSeparatedByString: @"\n"];
+    return [self isLastLayer: highlightLayer];
 }
 
 @end

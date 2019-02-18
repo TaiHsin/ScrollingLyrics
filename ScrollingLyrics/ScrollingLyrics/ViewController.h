@@ -8,10 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "LyricsView.h"
+#import "Lyrics.h"
 
 @interface ViewController : UIViewController
 
 @property (nonatomic, strong) LyricsView * lyricsView;
+@property (nonatomic, strong) Lyrics * lyrics;
 
 @end
 

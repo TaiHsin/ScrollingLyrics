@@ -16,18 +16,37 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self setupLyrics];
+    [self setupLyricsView];
+    [NSTimer scheduledTimerWithTimeInterval: 2 target: self
+                                   selector: @selector(scrollLyrics:)
+                                   userInfo: nil
+                                    repeats: YES];
+}
+
+- (void)setupLyrics {
+    self.lyrics = [[Lyrics alloc] init];
+}
+
+- (void)setupLyricsView {
     
+    NSArray * lyricsArray = [self.lyrics lyricsArray];
     CGRect rect = [[UIScreen mainScreen] bounds];
-    
     self.lyricsView = [[LyricsView alloc] initWithFrame: rect];
     [self.view addSubview: self.lyricsView];
     
-    [NSTimer scheduledTimerWithTimeInterval: 2 target: self selector: @selector(scrollLyrics:) userInfo: nil repeats: YES];
+    [self.lyricsView addLyricsLayersWith: lyricsArray];
+    [self.lyricsView startLyrics];
 }
 
 - (void)scrollLyrics: (NSTimer *)timer {
     
-    [self.lyricsView lyricsWillScroll];
+    BOOL isLastLyrics = [self.lyricsView scrollLyrics];
+    
+    if (isLastLyrics) {
+        [timer invalidate];
+        timer = nil;
+    }
 }
 
 @end

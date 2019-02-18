@@ -11,8 +11,12 @@
 @interface LyricsView: UIView
 
 @property (nonatomic, strong) UIView * lyricsContentView;
+@property BOOL isLastLyrics;
 
-- (void)lyricsWillScroll;
+- (void)startLyrics;
+- (BOOL)scrollLyrics;
+- (void)addLyricsLayersWith: (NSArray *)lyricsArray;
+- (BOOL)isLastLayer: (CATextLayer *)layer;
 
 @end
 

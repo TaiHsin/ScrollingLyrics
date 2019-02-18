@@ -16,6 +16,7 @@
 		5C7F3A562216A68B005F06BA /* ScrollingLyricsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F3A552216A68B005F06BA /* ScrollingLyricsTests.m */; };
 		5C7F3A612216A68B005F06BA /* ScrollingLyricsUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F3A602216A68B005F06BA /* ScrollingLyricsUITests.m */; };
 		5C7F3A6F2216B057005F06BA /* LyricsView.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F3A6E2216B057005F06BA /* LyricsView.m */; };
+		5C7F3A75221AA092005F06BA /* Lyrics.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F3A74221AA092005F06BA /* Lyrics.m */; };
 		9DE7E32222198F7000AA0671 /* Lyrics.txt in Resources */ = {isa = PBXBuildFile; fileRef = 9DE7E32122198F7000AA0671 /* Lyrics.txt */; };
 /* End PBXBuildFile section */
 
@@ -55,6 +56,8 @@
 		5C7F3A622216A68B005F06BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C7F3A6E2216B057005F06BA /* LyricsView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LyricsView.m; sourceTree = "<group>"; };
 		5C7F3A702216B062005F06BA /* LyricsView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LyricsView.h; sourceTree = "<group>"; };
+		5C7F3A73221AA088005F06BA /* Lyrics.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Lyrics.h; sourceTree = "<group>"; };
+		5C7F3A74221AA092005F06BA /* Lyrics.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Lyrics.m; sourceTree = "<group>"; };
 		9DE7E32122198F7000AA0671 /* Lyrics.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Lyrics.txt; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -110,6 +113,8 @@
 				5C7F3A3D2216A68A005F06BA /* AppDelegate.m */,
 				5C7F3A3F2216A68A005F06BA /* ViewController.h */,
 				5C7F3A402216A68A005F06BA /* ViewController.m */,
+				5C7F3A73221AA088005F06BA /* Lyrics.h */,
+				5C7F3A74221AA092005F06BA /* Lyrics.m */,
 				5C7F3A702216B062005F06BA /* LyricsView.h */,
 				5C7F3A6E2216B057005F06BA /* LyricsView.m */,
 				5C7F3A422216A68A005F06BA /* Main.storyboard */,
@@ -271,6 +276,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				5C7F3A75221AA092005F06BA /* Lyrics.m in Sources */,
 				5C7F3A6F2216B057005F06BA /* LyricsView.m in Sources */,
 				5C7F3A412216A68A005F06BA /* ViewController.m in Sources */,
 				5C7F3A4C2216A68B005F06BA /* main.m in Sources */,
