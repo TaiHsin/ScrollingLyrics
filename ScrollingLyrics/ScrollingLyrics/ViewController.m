@@ -16,6 +16,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     [self setupLyrics];
     [self setupLyricsView];
     [NSTimer scheduledTimerWithTimeInterval: 2 target: self

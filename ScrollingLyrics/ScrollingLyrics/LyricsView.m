@@ -22,7 +22,9 @@
 {
     self = [super initWithFrame: frame];
     if (self) {
+
         [self setBackgroundColor: [UIColor blackColor]];
+//        [self addBlurView];
         [self addLyricsContentView];
     }
     return self;
@@ -31,7 +33,7 @@
 - (void)addBlurView {
     
     if (!UIAccessibilityIsReduceTransparencyEnabled()) {
-        self.backgroundColor = [UIColor clearColor];
+        self.backgroundColor = [UIColor blackColor];
         
         UIBlurEffect * blurEffect = [UIBlurEffect effectWithStyle: UIBlurEffectStyleDark];
         UIVisualEffectView * blurEffectView = [[UIVisualEffectView alloc] initWithEffect: blurEffect];
@@ -48,6 +50,7 @@
     
     self.lyricsContentView = [UIView new];
     [self.lyricsContentView setTranslatesAutoresizingMaskIntoConstraints: NO];
+    [self.lyricsContentView setBackgroundColor: [UIColor clearColor]];
     [self addSubview: self.lyricsContentView];
 
     [self addConstraint: [NSLayoutConstraint constraintWithItem: self.lyricsContentView
@@ -94,7 +97,6 @@
     while (array.count) {
         CATextLayer * textLayer = [CATextLayer new];
         [textLayer setFrame: CGRectMake(0, textLayerHeight * i, lyricsLayerSize.width, textLayerHeight)];
-        [textLayer setBackgroundColor: [UIColor blackColor].CGColor];
         [textLayer setString: array[0]];
         [textLayer setFontSize: 20];
         [textLayer setAlignmentMode: kCAAlignmentCenter];
@@ -169,6 +171,7 @@
         }
     }
     
+    // Should move logic detemine to ViewController or Model?
     NSInteger length = [[highlightLayer string] length];
     if (length == 0) {
         NSLog(@"EMPTY!!!!!!!!!!!!!");
