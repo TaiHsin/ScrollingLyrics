@@ -17,6 +17,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    [self.view setBackgroundColor: [UIColor blackColor]];
     [self setupLyrics];
     [self setupLyricsView];
     [NSTimer scheduledTimerWithTimeInterval: 2 target: self

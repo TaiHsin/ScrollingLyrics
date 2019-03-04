@@ -8,10 +8,11 @@
 
 #import <Foundation/Foundation.h>
 #import "LyricsView.h"
+#import "LyricsLayer.h"
 
 @interface LyricsView()
 
-@property (nonatomic, strong) NSMutableArray * layerArray;
+@property (strong, nonatomic) NSMutableArray * layerArray;
 @property double positionY;
 
 @end
@@ -24,7 +25,6 @@
     if (self) {
 
         [self setBackgroundColor: [UIColor blackColor]];
-//        [self addBlurView];
         [self addLyricsContentView];
     }
     return self;
@@ -59,7 +59,7 @@
                                                                     toItem: self
                                                                  attribute: NSLayoutAttributeTop
                                                                 multiplier: 1
-                                                                  constant: 50]];
+                                                                  constant: 0]];
     
     [self addConstraint: [NSLayoutConstraint constraintWithItem: self.lyricsContentView
                                                                  attribute: NSLayoutAttributeBottom
@@ -67,7 +67,7 @@
                                                                     toItem: self
                                                                  attribute: NSLayoutAttributeBottom
                                                                 multiplier: 1
-                                                                  constant: -70]];
+                                                                  constant: 0]];
     
     [self addConstraint: [NSLayoutConstraint constraintWithItem: self.lyricsContentView
                                                       attribute: NSLayoutAttributeLeadingMargin
@@ -95,16 +95,27 @@
     CGFloat textLayerHeight = 30.0;
 
     while (array.count) {
-        CATextLayer * textLayer = [CATextLayer new];
+        
+        LyricsLayer * textLayer = [[LyricsLayer alloc] init];
         [textLayer setFrame: CGRectMake(0, textLayerHeight * i, lyricsLayerSize.width, textLayerHeight)];
         [textLayer setString: array[0]];
         [textLayer setFontSize: 20];
         [textLayer setAlignmentMode: kCAAlignmentCenter];
-        [self.lyricsContentView.layer addSublayer: textLayer];
-        [array removeObjectAtIndex: 0];
         
+        UIAccessibilityElement *anElement = [[UIAccessibilityElement alloc]
+                                             initWithAccessibilityContainer:self];
+        anElement.accessibilityLabel = lyricsArray[i];
+        anElement.accessibilityIdentifier = [NSString stringWithFormat:@"Lyrics %lu", (unsigned long)i];
+        anElement.accessibilityTraits = UIAccessibilityTraitNone;
+        textLayer.accessibilityElement = anElement;
+        
+        [self.lyricsContentView.layer addSublayer: textLayer];
+        
+        [array removeObjectAtIndex: 0];
         i ++;
     }
+    
+    UIAccessibilityPostNotification(UIAccessibilityLayoutChangedNotification, nil);
     
     self.lyricsContentView.clipsToBounds = YES;
     self.layerArray = [NSMutableArray arrayWithArray: self.lyricsContentView.layer.sublayers];
@@ -134,6 +145,7 @@
 }
 
 - (void)startLyrics {
+    
     
     CATextLayer * layer = self.layerArray[8];
 
@@ -171,7 +183,6 @@
         }
     }
     
-    // Should move logic detemine to ViewController or Model?
     NSInteger length = [[highlightLayer string] length];
     if (length == 0) {
         NSLog(@"EMPTY!!!!!!!!!!!!!");
@@ -179,6 +190,36 @@
     }
     
     return [self isLastLayer: highlightLayer];
+}
+
+- (BOOL)isAccessibilityElement
+{
+    return NO;
+}
+
+- (NSInteger)accessibilityElementCount
+{
+    return [self.layerArray count];
+}
+
+- (id)accessibilityElementAtIndex:(NSInteger)index
+{
+    LyricsLayer *aLayer = self.layerArray[index];
+    CGRect frame = aLayer.frame;
+    aLayer.accessibilityElement.accessibilityFrame = [[UIApplication sharedApplication].keyWindow convertRect:frame fromView:self];
+    return aLayer.accessibilityElement;
+}
+
+- (NSInteger)indexOfAccessibilityElement:(id)element
+{
+    NSInteger index = 0;
+    for (LyricsLayer *aLayer in self.layerArray) {
+        if ([aLayer.accessibilityElement isEqual:element]) {
+            return index;
+        }
+        index++;
+    }
+    return NSNotFound;
 }
 
 @end

@@ -10,7 +10,8 @@
 
 @interface LyricsView: UIView
 
-@property (nonatomic, strong) UIView * lyricsContentView;
+@property (strong, nonatomic) UIView * lyricsContentView;
+@property (strong, nonatomic) UIAccessibilityElement * accessbilityElement;
 @property BOOL isLastLyrics;
 
 - (void)startLyrics;

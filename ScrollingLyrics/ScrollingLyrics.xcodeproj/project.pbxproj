@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5C7D0016222D15470097F53C /* LyricsLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7D0015222D15470097F53C /* LyricsLayer.m */; };
 		5C7F3A3E2216A68A005F06BA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F3A3D2216A68A005F06BA /* AppDelegate.m */; };
 		5C7F3A412216A68A005F06BA /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5C7F3A402216A68A005F06BA /* ViewController.m */; };
 		5C7F3A442216A68A005F06BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C7F3A422216A68A005F06BA /* Main.storyboard */; };
@@ -38,6 +39,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5C7D0015222D15470097F53C /* LyricsLayer.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LyricsLayer.m; sourceTree = "<group>"; };
+		5C7D0017222D154E0097F53C /* LyricsLayer.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LyricsLayer.h; sourceTree = "<group>"; };
 		5C7F3A392216A68A005F06BA /* ScrollingLyrics.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ScrollingLyrics.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5C7F3A3C2216A68A005F06BA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		5C7F3A3D2216A68A005F06BA /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -117,6 +120,8 @@
 				5C7F3A74221AA092005F06BA /* Lyrics.m */,
 				5C7F3A702216B062005F06BA /* LyricsView.h */,
 				5C7F3A6E2216B057005F06BA /* LyricsView.m */,
+				5C7D0017222D154E0097F53C /* LyricsLayer.h */,
+				5C7D0015222D15470097F53C /* LyricsLayer.m */,
 				5C7F3A422216A68A005F06BA /* Main.storyboard */,
 				5C7F3A452216A68B005F06BA /* Assets.xcassets */,
 				5C7F3A472216A68B005F06BA /* LaunchScreen.storyboard */,
@@ -279,6 +284,7 @@
 				5C7F3A75221AA092005F06BA /* Lyrics.m in Sources */,
 				5C7F3A6F2216B057005F06BA /* LyricsView.m in Sources */,
 				5C7F3A412216A68A005F06BA /* ViewController.m in Sources */,
+				5C7D0016222D15470097F53C /* LyricsLayer.m in Sources */,
 				5C7F3A4C2216A68B005F06BA /* main.m in Sources */,
 				5C7F3A3E2216A68A005F06BA /* AppDelegate.m in Sources */,
 			);
